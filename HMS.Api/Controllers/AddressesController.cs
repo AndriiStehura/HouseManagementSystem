@@ -37,6 +37,7 @@ namespace HMS.Api.Controllers
         [HttpPost]
         public void Post([FromBody] Address value)
         {
+            value.AddressId = _unit.AddressesRepository.Count() + 1;
             _unit.AddressesRepository.Add(value);
             _unit.Submit();
         }

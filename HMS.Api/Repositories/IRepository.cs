@@ -18,5 +18,6 @@ namespace HMS.Api.Repositories
         void Update(TEntity entity);
         void Delete(int id);
         void Save();
+        int Count();
     }
 }

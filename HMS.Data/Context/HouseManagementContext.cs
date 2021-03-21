@@ -145,7 +145,7 @@ namespace HMS.Data.Context
                     .HasColumnName("role");
 
                 entity.HasOne(d => d.Person)
-                    .WithOne(p => p.Manager)
+                    .WithOne()
                     .HasForeignKey<Manager>(d => d.PersonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Managers__person__5165187F");
@@ -277,7 +277,7 @@ namespace HMS.Data.Context
                     .HasConstraintName("FK__Settlers__contac__5535A963");
 
                 entity.HasOne(d => d.Person)
-                    .WithOne(p => p.Settler)
+                    .WithOne()
                     .HasForeignKey<Settler>(d => d.PersonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Settlers__person__5441852A");

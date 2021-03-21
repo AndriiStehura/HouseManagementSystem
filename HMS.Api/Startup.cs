@@ -39,6 +39,12 @@ namespace HMS.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(policy => 
+            {
+                policy.AllowAnyHeader();
+                policy.AllowAnyMethod();
+                policy.AllowAnyOrigin();
+            });
 
             app.UseHttpsRedirection();
 

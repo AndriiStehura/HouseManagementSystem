@@ -85,5 +85,7 @@ namespace HMS.Api.Repositories
         {
             _context.SaveChanges();
         }
+
+        public int Count() => _dbSet.Count();
     }
 }
